@@ -20,7 +20,7 @@ CYGWIN_BRANCH=${CYGWIN_BRANCH:-woarm64}
 CYGWIN_PACKAGES_REPO=${CYGWIN_PACKAGES_REPO:-Windows-on-ARM-Experiments/cygwin-packages}
 CYGWIN_PACKAGES_BRANCH=${CYGWIN_PACKAGES_BRANCH:-main}
 
-COCOM_REPO=${COCOM_REPO:-git://git.code.sf.net/p/cocom/git}
+COCOM_REPO=${COCOM_REPO:-https://git.code.sf.net/p/cocom/git}
 COCOM_BRANCH=${COCOM_BRANCH:-master}
 
 # Baseline branches used for rebase when REBASE_SOURCES=1.
@@ -32,7 +32,7 @@ CYGWIN_PACKAGES_BASE_BRANCH=main
 COCOM_BASE_BRANCH=master
 
 ARCH=${ARCH:-aarch64}
-PLATFORM=${PLATFORM:-w64-mingw32}
+PLATFORM=${PLATFORM:-pc-cygwin}
 if [[ "$PLATFORM" =~ (mingw|cygwin) ]]; then
     CRT=${CRT:-msvcrt}
 else
@@ -104,13 +104,13 @@ else
     GCC_VERSION="15.0.0"
 fi
 
-DEBUG=${DEBUG:-0} # Enable debug build.
-CCACHE=${CCACHE:-0} # Enable usage of ccache.
-RUN_BOOTSTRAP=${RUN_BOOTSTRAP:-0} # Bootstrap dependencies during the build.
-UPDATE_SOURCES=${UPDATE_SOURCES:-0} # Update source code repositories.
+DEBUG=${DEBUG:-1} # Enable debug build.
+CCACHE=${CCACHE:-1} # Enable usage of ccache.
+RUN_BOOTSTRAP=${RUN_BOOTSTRAP:-1} # Bootstrap dependencies during the build.
+UPDATE_SOURCES=${UPDATE_SOURCES:-1} # Update source code repositories.
 UPDATE_LIBRARIES=${UPDATE_LIBRARIES:-0} # Update also source code of tested libraries repositories.
 FLAT_CLONE=${FLAT_CLONE:-1} # Whether the clone of source codes should be full or flat.
-RESET_SOURCES=${RESET_SOURCES:-0} # Reset source code repositories before update.
+RESET_SOURCES=${RESET_SOURCES:-1} # Reset source code repositories before update.
 REBASE_SOURCES=${REBASE_SOURCES:-0} # Together with the update, rebase repositories
                                     # to the baseline branches and push the result.
                                     # Unsupported when FLAT_CLONE=1.
