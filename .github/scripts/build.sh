@@ -58,6 +58,10 @@ if [[ "$PLATFORM" =~ cygwin ]]; then
     $ROOT_PATH/.github/scripts/toolchain/build-cygwin.sh 2
 fi
 
+if [[ "$PLATFORM" =~ cygwin ]]; then
+    $ROOT_PATH/.github/scripts/toolchain/execute-cygwin-tests.sh | tee -a ../test-results.log
+fi
+
 if [[ "$CCACHE" = 1 ]]; then
     ccache $CCACHE_STATISTICS
 fi
