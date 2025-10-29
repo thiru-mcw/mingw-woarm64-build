@@ -32,17 +32,18 @@ CYGWIN_PACKAGES_BASE_BRANCH=main
 COCOM_BASE_BRANCH=master
 
 ARCH=${ARCH:-aarch64}
-PLATFORM=${PLATFORM:-w64-mingw32}
+PLATFORM=${PLATFORM:-pc-cygwin}
 if [[ "$PLATFORM" =~ (mingw|cygwin) ]]; then
     CRT=${CRT:-msvcrt}
 else
     CRT=${CRT:-libc}
 fi
 
-PROCESSOR=$(uname --processor)
-BUILD=${BUILD:-$PROCESSOR-pc-linux-gnu}
-HOST=${HOST:-$PROCESSOR-pc-linux-gnu}
+PROCESSOR=x86_64
+BUILD=${BUILD:-$PROCESSOR-pc-cygwin}
+HOST=${HOST:-$PROCESSOR-pc-cygwin}
 TARGET=$ARCH-$PLATFORM
+CYGWIN=`if uname | grep -qi cygwin; then echo 1; else echo 0; fi`
 TOOLCHAIN_NAME=${TOOLCHAIN_NAME:-$ARCH-$PLATFORM-$CRT}
 
 if [[ ("$PLATFORM" =~ (mingw|cygwin) && ! ("$CRT" =~ (msvcrt|ucrt))) ||
