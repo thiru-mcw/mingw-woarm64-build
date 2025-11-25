@@ -8,19 +8,19 @@ set -o pipefail # fail of any command in pipeline is an error
 BINUTILS_REPO=${BINUTILS_REPO:-Windows-on-ARM-Experiments/binutils-woarm64}
 BINUTILS_BRANCH=${BINUTILS_BRANCH:-woarm64}
 
-GCC_REPO=${GCC_REPO:-Windows-on-ARM-Experiments/gcc-woarm64}
-GCC_BRANCH=${GCC_BRANCH:-woarm64}
+GCC_REPO=${GCC_REPO:-thiru-mcw/gcc-woarm64-own}
+GCC_BRANCH=${GCC_BRANCH:-native-testing}
 
 MINGW_REPO=${MINGW_REPO:-Windows-on-ARM-Experiments/mingw-woarm64}
 MINGW_BRANCH=${MINGW_BRANCH:-woarm64}
 
-CYGWIN_REPO=${CYGWIN_REPO:-Windows-on-ARM-Experiments/newlib-cygwin}
-CYGWIN_BRANCH=${CYGWIN_BRANCH:-woarm64}
+CYGWIN_REPO=${CYGWIN_REPO:-thiru-mcw/cygwin-own}
+CYGWIN_BRANCH=${CYGWIN_BRANCH:-native-testing}
 
 CYGWIN_PACKAGES_REPO=${CYGWIN_PACKAGES_REPO:-Windows-on-ARM-Experiments/cygwin-packages}
 CYGWIN_PACKAGES_BRANCH=${CYGWIN_PACKAGES_BRANCH:-main}
 
-COCOM_REPO=${COCOM_REPO:-git://git.code.sf.net/p/cocom/git}
+COCOM_REPO=${COCOM_REPO:-https://git.code.sf.net/p/cocom/git}
 COCOM_BRANCH=${COCOM_BRANCH:-master}
 
 # Baseline branches used for rebase when REBASE_SOURCES=1.
