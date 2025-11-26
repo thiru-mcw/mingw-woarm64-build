@@ -22,8 +22,8 @@ echo "Branches: binutils=$BINUTILS_BRANCH gcc=$GCC_BRANCH mingw=$MINGW_BRANCH cy
 
 mkdir -p "$BUILD_PATH" "$CCACHE_DIR_PATH" "$TOOLCHAIN_PATH" "$ARTIFACT_PATH"
 
-echo "Cleaning old build..."
-rm -rf "$BUILD_PATH"/* "$TOOLCHAIN_PATH"/* || true
+# echo "Cleaning old build..."
+# rm -rf "$BUILD_PATH"/* "$TOOLCHAIN_PATH"/* || true
 
 chmod +x build.sh
 TOOLCHAIN_PATH="$TOOLCHAIN_PATH" ./build.sh
