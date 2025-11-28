@@ -8,10 +8,11 @@ CYGWIN_BRANCH="${4:-native-testing}"
 
 ARCH="aarch64"
 PLATFORM="pc-cygwin"
+CRT="msvcrt"
 
 BUILD_PATH="$HOME/build"
 CCACHE_DIR_PATH="$HOME/ccache"
-TOOLCHAIN_PATH="$HOME/native-toolchain"
+TOOLCHAIN_PATH="$HOME/cross-$ARCH-$PLATFORM-$CRT"
 ARTIFACT_PATH="$HOME/artifacts"
 
 TOOLCHAIN_PACKAGE_NAME="${ARCH}-${PLATFORM}-toolchain.tar.xz"
