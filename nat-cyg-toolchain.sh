@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BINUTILS_BRANCH="${1:-woarm64}"
+BINUTILS_BRANCH="${1:-native-testing}"
 GCC_BRANCH="${2:-native-testing}"
 MINGW_BRANCH="${3:-woarm64}"
 CYGWIN_BRANCH="${4:-native-testing}"

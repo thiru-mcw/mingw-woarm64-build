@@ -1,11 +1,11 @@
 #!/bin/bash
-# This script downloads and configures packages, 
+# This script downloads and configures packages,
 # builds and installs the Windows on ARM64 GNU Toolchain.
 
 set -e # exit on error
 set -x # echo on
 
-export BINUTILS_REPO=${BINUTILS_REPO:-https://github.com/Windows-on-ARM-Experiments/binutils-woarm64.git}
+export BINUTILS_REPO=${BINUTILS_REPO:-https://github.com/thiru-mcw/binutils-woarm64-own.git}
 export BINUTILS_BRANCH=${BINUTILS_BRANCH:-woarm64}
 
 export MINGW_REPO=${MINGW_REPO:-https://github.com/Windows-on-ARM-Experiments/mingw-woarm64.git}

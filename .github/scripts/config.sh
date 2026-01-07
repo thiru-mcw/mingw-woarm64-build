@@ -5,8 +5,8 @@ set -x # echo on
 set -o pipefail # fail of any command in pipeline is an error
 
 # Branches that will be used for build when UPDATE_SOURCES=1.
-BINUTILS_REPO=${BINUTILS_REPO:-Windows-on-ARM-Experiments/binutils-woarm64}
-BINUTILS_BRANCH=${BINUTILS_BRANCH:-woarm64}
+BINUTILS_REPO=${BINUTILS_REPO:-thiru-mcw/binutils-woarm64-own}
+BINUTILS_BRANCH=${BINUTILS_BRANCH:-native-testing}
 
 GCC_REPO=${GCC_REPO:-thiru-mcw/gcc-woarm64-own}
 GCC_BRANCH=${GCC_BRANCH:-native-testing}
