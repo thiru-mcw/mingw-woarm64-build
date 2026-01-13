@@ -6,7 +6,7 @@ set -e # exit on error
 set -x # echo on
 
 export BINUTILS_REPO=${BINUTILS_REPO:-https://github.com/thiru-mcw/binutils-woarm64-own.git}
-export BINUTILS_BRANCH=${BINUTILS_BRANCH:-woarm64}
+export BINUTILS_BRANCH=${BINUTILS_BRANCH:-native-testing}
 
 export MINGW_REPO=${MINGW_REPO:-https://github.com/Windows-on-ARM-Experiments/mingw-woarm64.git}
 export MINGW_BRANCH=${MINGW_BRANCH:-woarm64}
