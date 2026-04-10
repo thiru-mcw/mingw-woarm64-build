@@ -7,7 +7,7 @@ MINGW_BRANCH="${3:-woarm64}"
 CYGWIN_BRANCH="${4:-native-testing}"
 
 ARCH="aarch64"
-PLATFORM="pc-cygwin"
+PLATFORM="w64-mingw32"
 CRT="msvcrt"
 
 BUILD_PATH="$HOME/build"

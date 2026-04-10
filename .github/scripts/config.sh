@@ -32,7 +32,7 @@ CYGWIN_PACKAGES_BASE_BRANCH=main
 COCOM_BASE_BRANCH=master
 
 ARCH=${ARCH:-aarch64}
-PLATFORM=${PLATFORM:-pc-cygwin}
+PLATFORM=${PLATFORM:-w64-mingw32}
 if [[ "$PLATFORM" =~ (mingw|cygwin) ]]; then
     CRT=${CRT:-msvcrt}
 else
